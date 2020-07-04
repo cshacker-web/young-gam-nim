@@ -1,0 +1,20 @@
+select count(*) 인원수, sum(salary) 총급여 FROM emp;
+인원수 총급여
+107  39999
+
+select dept_name 부서명, count(*) 인원수, sum(salary) 총급여 FROM emp GROUP BY dept_name;
+부서명 인원수 총급여
+test 107  39999
+test2 107  39999
+
+group by는 집계함수를 000 기준으로 그룹화 하고난 뒤의 결과물을 출력
+
+having은 group by 절 뒤에 위치, 그룹화한 데이터에 조건을 걸어줌
+
+--------------------------------------------------------------------------------
+
+distinct
+select distinct fd1 from tab
+select fd1 from tab group by fd1
+group by는 정렬된 결과를 보여준다.
+
